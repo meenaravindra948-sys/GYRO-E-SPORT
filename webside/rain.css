@@ -1,0 +1,34 @@
+#golden-rain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.golden-drop {
+    position: absolute;
+    top: -150px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 215, 0, 0.8), #FFD700);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.4);
+    animation: golden-fall linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes golden-fall {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10%, 80% {
+        opacity: var(--drop-opacity, 0.8);
+    }
+    100% {
+        transform: translateY(calc(100vh + 300px));
+        opacity: 0;
+    }
+}

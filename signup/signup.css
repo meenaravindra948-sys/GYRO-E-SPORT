@@ -1,0 +1,304 @@
+/* Variables & Resets */
+:root {
+    --bg-dark: #0a0a0c;
+    --bg-darker: #050505;
+    --gold: #FFD700;
+    --gold-hover: #ffb300;
+    --gold-glow: rgba(255, 215, 0, 0.4);
+    --text-main: #f0f0f0;
+    --text-muted: #a1a1aa;
+    --card-bg: rgba(15, 15, 18, 0.85);
+    --card-border: rgba(255, 215, 0, 0.2);
+    --input-bg: rgba(0, 0, 0, 0.5);
+    --error-color: #ff4444;
+    --success-color: #00C851;
+    --warning-color: #ffbb33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gold-text {
+    color: var(--gold);
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+.signup-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card Styles */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tagline {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+/* Social Buttons */
+.social-signup-full {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-btn-full {
+    width: 100%;
+    padding: 12px;
+    background: var(--input-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-btn-full i {
+    font-size: 1.2rem;
+}
+
+.social-btn-full.google:hover { border-color: #DB4437; background: rgba(219, 68, 55, 0.1); box-shadow: 0 0 15px rgba(219, 68, 55, 0.3); }
+.social-btn-full.facebook:hover { border-color: #4267B2; background: rgba(66, 103, 178, 0.1); box-shadow: 0 0 15px rgba(66, 103, 178, 0.3); }
+
+.social-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.social-divider::before,
+.social-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-divider span {
+    padding: 0 15px;
+}
+
+/* Form Inputs */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 45px;
+    background: var(--input-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.input-group input:focus + .icon,
+.input-group input:not(:placeholder-shown) + .icon {
+    color: var(--gold);
+}
+
+.toggle-pwd {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.toggle-pwd:hover {
+    color: var(--gold);
+}
+
+/* Password Strength */
+.password-strength {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    height: 4px;
+    padding: 0 5px;
+}
+
+.password-strength .bar {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+.error-text {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.75rem;
+    margin-top: 4px;
+    min-height: 15px;
+}
+
+/* Checkbox */
+.terms-group {
+    margin-bottom: 25px;
+}
+
+.terms-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.terms-label input {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: var(--gold);
+}
+
+.terms-label a {
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+}
+
+.primary-btn {
+    background-color: var(--gold);
+    color: #000;
+}
+
+.primary-btn:hover {
+    background-color: var(--gold-hover);
+    box-shadow: 0 0 20px var(--gold-glow);
+    transform: translateY(-2px);
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Footer */
+.card-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.card-footer a {
+    text-decoration: none;
+    font-weight: 700;
+    transition: text-shadow 0.3s;
+}
+
+.card-footer a:hover {
+    text-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 30px 20px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+}

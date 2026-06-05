@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYRO E SPORT | Professional Tournaments</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rain.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">GYRO <span class="gold-text">E SPORT</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tournaments">Tournaments</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="../support/support.html">Support</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="../login/login.html" class="btn login-btn">Login</a>
+            <a href="../signup/signup.html" class="btn signup-btn">Sign Up</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="title">BATTLEGROUND <br><span class="gold-text">GLORY</span> AWAITS</h1>
+                <h3 class="subtitle">Play • Compete • Win</h3>
+                <p>Join the most competitive Free Fire esports platform. Register for daily scrims, weekly showdowns, and massive monthly prize pools. Prove your skills and dominate the leaderboard.</p>
+                <div class="hero-actions">
+                    <a href="#tournaments" class="btn primary-btn glow-btn">Join Tournament</a>
+                    <a href="#rules" class="btn secondary-btn">How It Works</a>
+                </div>
+            </div>
+            
+            <!-- Tournament Info Card -->
+            <div class="hero-card glass-card">
+                <div class="card-header">
+                    <span class="live-badge"><i class="fas fa-circle"></i> REGISTRATION OPEN</span>
+                </div>
+                <h3>FF Pro League 2024</h3>
+                <div class="tourney-details">
+                    <p><i class="far fa-calendar-alt"></i> Date: Oct 25 - Oct 28</p>
+                    <p><i class="far fa-clock"></i> Time: 18:00 IST (Daily)</p>
+                    <p><i class="fas fa-trophy"></i> Prize Pool: ₹5,000</p>
+                </div>
+                <button class="btn primary-btn full-width mt-3" onclick="window.location.href='../registration/registration.html'">Register Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="section dark-bg">
+        <div class="container features-grid">
+            <div class="feature-card glass-card">
+                <i class="fas fa-calendar-check gold-icon"></i>
+                <h3>Daily Tournaments</h3>
+                <p>Compete in solo and squad tournaments every single day.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <i class="fas fa-shield-alt gold-icon"></i>
+                <h3>Fair Play</h3>
+                <p>Strict anti-cheat monitoring and active moderators.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <i class="fas fa-coins gold-icon"></i>
+                <h3>Exciting Rewards</h3>
+                <p>Instant payouts, diamonds, and exclusive merchandise.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <i class="fas fa-bolt gold-icon"></i>
+                <h3>Easy Registration</h3>
+                <p>Seamless automated slot booking system for your squad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="tournaments" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Active <span class="gold-text">Tournaments</span></h2>
+            <p class="section-subtext">Find the perfect battlefield for you and your squad.</p>
+            
+            <div class="tournament-grid">
+                <!-- Tourney 1 -->
+                <div class="tourney-card glass-card">
+                    <div class="t-banner img-1">
+                        <span class="badge squad-badge">Squad (4v4)</span>
+                    </div>
+                    <div class="t-content">
+                        <h3>Weekend Warfare Series</h3>
+                        <div class="t-stats">
+                            <div class="stat"><span class="label">Entry Fee</span><span class="value">₹100</span></div>
+                            <div class="stat"><span class="label">Prize Pool</span><span class="value gold-text">₹300</span></div>
+                        </div>
+                        <button class="btn primary-btn outline-btn full-width" onclick="window.location.href='../registration/registration.html'">Join Now</button>
+                    </div>
+                </div>
+                <!-- Tourney 2 -->
+                <div class="tourney-card glass-card">
+                    <div class="t-banner img-2">
+                        <span class="badge solo-badge">Solo</span>
+                    </div>
+                    <div class="t-content">
+                        <h3>Lone Wolf Championship</h3>
+                        <div class="t-stats">
+                            <div class="stat"><span class="label">Entry Fee</span><span class="value">₹20</span></div>
+                            <div class="stat"><span class="label">Prize Pool</span><span class="value gold-text">₹100</span></div>
+                        </div>
+                        <button class="btn primary-btn outline-btn full-width" onclick="window.location.href='../registration/registration.html'">Join Now</button>
+                    </div>
+                </div>
+
+                <!-- Tourney 3 -->
+                <div class="tourney-card glass-card">
+                    <div class="t-banner img-3">
+                        <span class="badge squad-badge">Clash Squad</span>
+                    </div>
+                    <div class="t-content">
+                        <h3>Midnight Brawlers</h3>
+                        <div class="t-stats">
+                            <div class="stat"><span class="label">Entry Fee</span><span class="value">₹80</span></div>
+                            <div class="stat"><span class="label">Prize Pool</span><span class="value gold-text">₹120</span></div>
+                        </div>
+                        <button class="btn primary-btn outline-btn full-width" onclick="window.location.href='../registration/registration.html'">Join Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="rules" class="section dark-bg">
+        <div class="container text-center">
+            <h2 class="section-title">How It <span class="gold-text">Works</span></h2>
+            <div class="timeline">
+                <div class="step"><div class="step-num">1</div><h4>Register</h4><p>Create an account and verify your game UID.</p></div>
+                <div class="step"><div class="step-num">2</div><h4>Join</h4><p>Pick a tournament and register your squad slots.</p></div>
+                <div class="step"><div class="step-num">3</div><h4>Compete</h4><p>Get room details and play your designated match.</p></div>
+                <div class="step"><div class="step-num">4</div><h4>Win Rewards</h4><p>Claim your winnings directly to your wallet or ID.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-sponsors">
+                <h4>Our Partners</h4>
+                <div class="sponsors-list">
+                    <span>BOOYAH!</span> | <span>ESL Gaming</span> | <span>Razer</span>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://discord.gg/y2k4dF7A"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/gyrorishabh/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@GYRORISHABH" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> • <a href="#">Terms & Conditions</a> • <a href="#">Payment Methods</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GYRO E SPORT Platform. Designed for Champions.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="rain.js"></script>
+</body>
+</html>

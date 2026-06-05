@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | GYRO E SPORT Platform</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="../webside/rain.css">
+</head>
+<body>
+
+    <div class="signup-wrapper">
+        <div class="signup-card glass-card fade-in">
+            
+            <!-- Header -->
+            <div class="card-header">
+                <a href="../webside/index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">GYRO <span class="gold-text">E SPORT</span></div>
+                </a>
+                <p class="tagline">PLAY • COMPETE • WIN</p>
+            </div>
+
+            <!-- Social Signup -->
+            <div class="social-signup-full">
+                <button type="button" class="social-btn-full google" id="btnGoogleSignup">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <button type="button" class="social-btn-full facebook" id="btnFacebookSignup">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                </button>
+            </div>
+
+            <div class="social-divider"><span>OR REGISTER WITH EMAIL</span></div>
+
+            <!-- Form Section -->
+            <form id="signupForm">
+                <div class="input-group">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="username" placeholder="Username" autocomplete="username">
+                    <span class="error-text" id="usernameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" id="email" placeholder="Email Address" autocomplete="email">
+                    <span class="error-text" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+                    <i class="fas fa-eye toggle-pwd" data-target="password"></i>
+                    <div class="password-strength" id="pwdStrength">
+                        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    </div>
+                    <span class="error-text" id="passwordError"></span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" autocomplete="new-password">
+                    <i class="fas fa-eye toggle-pwd" data-target="confirmPassword"></i>
+                    <span class="error-text" id="confirmPasswordError"></span>
+                </div>
+
+                <div class="form-actions terms-group">
+                    <label class="terms-label">
+                        <input type="checkbox" id="terms">
+                        <span class="checkmark"></span> I agree to the <a href="#" class="gold-text">Terms & Conditions</a>
+                    </label>
+                    <span class="error-text" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="btn primary-btn full-width glow-btn">SIGN UP</button>
+            </form>
+
+            <!-- Footer Links -->
+            <div class="card-footer">
+                <p>Already have an account? <a href="../login/login.html" class="gold-text">LOGIN</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+    <script src="../webside/rain.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | GYRO E SPORT Platform</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../webside/rain.css">
+</head>
+<body>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>AUTHENTICATING...</p>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-card glass-card fade-in">
+            
+            <!-- Header -->
+            <div class="card-header">
+                <a href="../webside/index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">GYRO <span class="gold-text">E SPORT</span></div>
+                </a>
+                <p class="tagline">PLAY • COMPETE • WIN</p>
+            </div>
+
+            <!-- Form Section -->
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="text" id="email" placeholder="Email or Username" autocomplete="username">
+                    <span class="error-text" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+                    <i class="fas fa-eye toggle-pwd" id="togglePassword"></i>
+                    <span class="error-text" id="passwordError"></span>
+                </div>
+
+                <div class="form-actions">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span class="checkmark"></span> Remember Me
+                    </label>
+                    <a href="#" class="forgot-pwd">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn primary-btn full-width glow-btn">LOGIN</button>
+            </form>
+
+            <!-- Social Login -->
+            <div class="social-divider"><span>OR LOGIN WITH</span></div>
+            <div class="social-login">
+                <button type="button" id="btnGoogleLogin" class="social-btn google"><i class="fab fa-google"></i></button>
+                <button type="button" id="btnFacebookLogin" class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn discord"><i class="fab fa-discord"></i></button>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="card-footer">
+                <p>Don't have an account? <a href="../signup/signup.html" class="gold-text">SIGN UP</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+    <script src="../webside/rain.js"></script>
+</body>
+</html>

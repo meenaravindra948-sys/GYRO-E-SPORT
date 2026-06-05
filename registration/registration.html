@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYRO E SPORT | Tournament Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="../webside/rain.css">
+</head>
+<body>
+
+    <div class="registration-wrapper">
+        <div class="glass-card fade-in">
+            <div class="card-header">
+                <div class="logo">GYRO <span class="gold-text">E SPORT</span></div>
+                <p class="tagline">TOURNAMENT REGISTRATION</p>
+            </div>
+
+            <form id="registrationForm" novalidate>
+                <!-- Registration Details -->
+                <div class="form-section">
+                    <h3 class="section-heading">Player Details</h3>
+                    <div class="input-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <i class="fas fa-user icon"></i>
+                        <span class="error-text" id="nameError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="gamingUid" placeholder="Gaming UID" required>
+                        <i class="fas fa-gamepad icon"></i>
+                        <span class="error-text" id="gamingUidError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="inGameName" placeholder="In-Game Name" required>
+                        <i class="fas fa-tag icon"></i>
+                        <span class="error-text" id="ignError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" id="mobileNumber" placeholder="Mobile Number" required>
+                        <i class="fas fa-mobile-alt icon"></i>
+                        <span class="error-text" id="mobileError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <select id="tournamentSelect" required>
+                            <option value="" disabled selected>Select Tournament</option>
+                            <option value="Solo Tournament">Solo Tournament</option>
+                            <option value="Squad Tournament (4v4)">Squad Tournament (4v4)</option>
+                            <option value="Clash Squad Tournament">Clash Squad Tournament</option>
+                        </select>
+                        <i class="fas fa-trophy icon"></i>
+                        <span class="error-text" id="tournamentError"></span>
+                    </div>
+                </div>
+
+                <!-- Payment Section -->
+                <div class="payment-section">
+                    <h3 class="section-heading gold-text text-center glow-text">PAY ENTRY FEE</h3>
+                    
+                    <div class="upi-container text-center">
+                        <p class="upi-label">UPI ID:</p>
+                        <div class="upi-id">GYRORISHABH@AXL <i class="fas fa-copy copy-icon" id="copyUpi" title="Copy UPI"></i></div>
+                    </div>
+
+                    <div class="qr-container text-center">
+                        <div class="qr-placeholder">
+                            <i class="fas fa-qrcode"></i>
+                            <p>SCAN TO PAY</p>
+                        </div>
+                    </div>
+                    
+                    <p class="payment-instructions text-center">Please complete the payment using the QR Code or UPI ID above. Enter the 12-digit Transaction/UTR ID below.</p>
+
+                    <div class="input-group">
+                        <input type="text" id="transactionId" placeholder="Transaction ID (UTR)" required>
+                        <i class="fas fa-receipt icon"></i>
+                        <span class="error-text" id="transactionError"></span>
+                    </div>
+                </div>
+
+                <!-- Submit Area -->
+                <div class="submit-area">
+                    <button type="submit" class="btn primary-btn full-width glow-btn">REGISTER NOW</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2>Registration Submitted Successfully</h2>
+            <p>Tournament Team Will Verify Your Payment.</p>
+            <button id="closeModal" class="btn primary-btn mt-3">OK</button>
+        </div>
+    </div>
+
+    <script src="registration.js"></script>
+    <script src="../webside/rain.js"></script>
+</body>
+</html>
